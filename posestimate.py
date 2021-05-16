@@ -16,7 +16,7 @@ Usage:
 
 2. Put any media file (.mp4, .gif, etc.) in the same directory
 
-3. Excute this module in cmd: python poseesti.py
+3. Execute this module in cmd: python poseesti.py
 
 4. Follow the instruction in the program
 
@@ -68,7 +68,7 @@ def main():
 			cv2.imshow("Video", img)
 			cv2.waitKey(inputKey)
 	else:
-		print("\n Go checking the file name and excute again")
+		print("\n Go checking the file name and execute again")
 
 
 if __name__ == "__main__":
