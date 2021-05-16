@@ -1,9 +1,14 @@
 # practice_opencv
 
+This module aims at pose estimation and based on opencv and mediapipe.
+
+Reference: https://www.youtube.com/watch?v=brwgBf6VB0I
+
+===========================================================================
+
 You must install opencv-python(cv2) and mediapipe before excuting this module.
 
 By the way, the python devolopment is ver3.9
-
 
 ===========================================================================
 
