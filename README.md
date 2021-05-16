@@ -5,7 +5,7 @@ You must install opencv-python(cv2) and mediapipe before excuting this module.
 By the way, the python devolopment is ver3.9
 
 
-==============================================================================
+===========================================================================
 Usage:
 
 1. Put this module in any dirctory.
