@@ -9,14 +9,11 @@ This project demonstrates a basic implementation of stereo pose estimation using
 
 Goal: To gain hands-on understanding of epipolar geometry and visual localization.
 
-Reference: https://www.youtube.com/watch?v=brwgBf6VB0I
-
-
+Reference: https://www.youtube.com/watch?v=I1gMUbEAUFw
 
 ===========================================================================
 
 You must install opencv-python(cv2) and mediapipe before excuting this module.
-
 By the way, the python devolopment is ver3.9
 
 ===========================================================================
