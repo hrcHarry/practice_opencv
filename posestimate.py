@@ -13,12 +13,11 @@ By the way, the python devolopment is ver3.9
 Usage:
 
 1. Put this module in any dirctory.
-
 2. Put any media file (.mp4, .gif, etc.) in the same directory
-
 3. Execute this module in cmd: python poseesti.py
-
 4. Follow the instruction in the program
+  a. input the file name (including the file extension)
+  b. input the display rate (recommend 70+)
 
 Enjoy!
 
@@ -33,7 +32,7 @@ class poseDetector():
 		self.trackCon = trackCon
 
 		self.mpDraw = mp.solutions.drawing_utils
-		self.mpPose = mp.solutions.pose 
+		self.mpPose = mp.solutions.pose
 		self.pose = self.mpPose.Pose(self.mode, self.upBody, self.smooth, self.detectionCon, self.trackCon)
 
 	def findPose(self, img, draw= True):
@@ -52,24 +51,38 @@ def main():
 	dirPath = "./"
 	if inputVid in os.listdir(dirPath):
 		cap = cv2.VideoCapture(inputVid)
+
+		if not cap.isOpened():
+			print(f"\n Unable to open the video: {inputVid}")
+			return
+
 		pTime = 0	# previous time
 		detector = poseDetector()
 
 		while True:
 			success, img = cap.read()
+
+			if not success or img is None:
+				print("! The video has finished or failed opening")
+				break
+
 			img = detector.findPose(img)
 
 			cTime = time.time()    # current time
-			fps = 1/(cTime - pTime)
+			fps = 1/(cTime - pTime + 1e-5)
 			pTime = cTime
 
 			cv2.putText(img, str(int(fps)), (70,50), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 0), 3)
 
 			cv2.imshow("Video", img)
 			cv2.waitKey(inputKey)
+
+		cap.release()
+		cv2.destroyAllWindows()
 	else:
 		print("\n Go checking the file name and execute again")
 
 
 if __name__ == "__main__":
 	main()
+
