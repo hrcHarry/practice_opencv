@@ -24,11 +24,7 @@ By the way, the python devolopment is ver3.9
 1. Put this module in any dirctory.
 2. Put any media file (.mp4, .gif, etc.) in the same directory
 3. Excute this module in cmd: python poseesti.py
-4. Follow the instruction in the program
-   
-  a. input the file name (including the file extension)
-  
-  b. input the display rate (recommend 70+)
+4. Follow the instruction in the program: (a) input the file name (including the file extension) (b) input the display rate (recommend 70+)
 
 Enjoy!
 
